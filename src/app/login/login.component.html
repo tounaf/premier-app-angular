@@ -1,0 +1,15 @@
+<div>
+  <label>{{ username }}</label>
+  <input type="text" [value]="username" (focus) = "me()"><br>
+  <label >{{ login  }} :</label><br>
+  <input type="text"  [(ngModel)]="login"><br>
+  <label > {{ password }} :</label><br>
+  <input type="text"  [(ngModel)]="password"><br>
+  <input type="button" value="afficher liste" (click)="liste()">
+  <input type="button" value="ajouterr" (click)="add()">
+</div>
+<hr>
+<ul *ngFor="let u of users">
+  <li *ngIf="u.langage === 'fetra'">{{ u.langage }}</li>
+  <li [ngClass]="">{{ u.fr }}</li>
+</ul>
