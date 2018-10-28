@@ -50,6 +50,7 @@ export class LoginComponent implements OnInit {
   liste() {
     this.http.get<any[]>(this.url)
     .subscribe(users => {
+      console.log(users);
       this.users = users;
     });
     this.loginService.hello();
